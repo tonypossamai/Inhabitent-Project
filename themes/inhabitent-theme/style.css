@@ -544,6 +544,7 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-image: url(./images/home-hero.jpg);
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -673,6 +674,28 @@ main {
 
 .bypostauthor {
   display: block; }
+
+/* Front-page */
+.home-hero {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(images/home-hero.jpg), #969696;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.4)), url(images/home-hero.jpg), #969696; }
+
+.home-hero {
+  background-size: cover,cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh; }
 
 /*--------------------------------------------------------------
 # Media

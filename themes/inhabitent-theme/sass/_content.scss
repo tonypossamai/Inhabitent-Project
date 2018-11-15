@@ -54,3 +54,18 @@ main {
 	display: block;
 }
 
+/* Front-page */
+
+.home-hero {
+	background: linear-gradient(180deg,rgba(0,0,0,.4) 0,rgba(0,0,0,.4)), url(images/home-hero.jpg),#969696;
+}
+
+.home-hero {
+
+	background-size: cover,cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}

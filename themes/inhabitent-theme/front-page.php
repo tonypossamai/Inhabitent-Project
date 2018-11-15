@@ -11,6 +11,14 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
+			<section class="home-hero">
+				<img src="<?php echo get_template_directory_uri(); ?>/images/logos/inhabitent-logo-full.svg" class="logo" alt="Inhabitent full logo">
+				<!-- <img src="<?php echo get_template_directory_uri(); ?>/images/home-hero.jpg"> -->
+			</section>
+			
+
+
+
 		<?php if ( have_posts() ) : ?>
 
 			<?php if ( is_home() && ! is_front_page() ) : ?>

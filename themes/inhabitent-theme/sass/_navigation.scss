@@ -135,7 +135,8 @@ a {
 
 .site-header {
     width: 100%;
-    display: flex;
+	display: flex;
+	background-image: url(./images/home-hero.jpg);
     justify-content: space-between;
     padding: 10px 150px;
     background: transparent;
