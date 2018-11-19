@@ -516,18 +516,18 @@ textarea {
   position: relative; }
   .site-header .logo {
     width: 30%; }
-  .site-header #primary-menu {
-    -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
-            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2); }
   .site-header .menu .menu-item a {
     color: white;
     font-size: 1.2em;
     padding-left: 20px; }
 
-.home header.site-header {
+.home header.site-header, .page-template-page-about header.site-header {
   background-color: transparent;
-  position: absolute;
-  z-index: 3; }
+  position: absolute; }
+
+.post-type-archive-product header.site-header, .category-journal header.site-header, .page-id-20 header.site-header {
+  background-color: white;
+  position: relative; }
 
 /* Widget Area */
 /* Footer */
@@ -665,6 +665,17 @@ textarea {
           align-items: center;
   height: 100vh; }
 
+.journal-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .journal-section .title-section {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap; }
+
 /* FIND US PAGE */
 .page-id-20 {
   padding: 0px 180px;
@@ -683,23 +694,31 @@ textarea {
     line-height: 1.75; }
 
 /* ABOUT PAGE */
-.wp-block-cover {
+.hero-image-header {
+  margin-bottom: 3em;
   height: 100vh; }
 
-.wp-block-cover-text {
-  font-family: "Novecento";
-  font-size: 2.1rem; }
+.entry-header h1 {
+  display: none; }
 
-.entry-content > :not(.wp-block-cover) {
+.entry-content h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 3.2em;
+  color: #fff; }
+
+.entry-content > :not(.entry-header) {
   margin: 30px auto;
   max-width: 900px; }
 
-p b {
+.page-template-page-about .entry-content h2 {
   color: #2f1339;
   text-transform: uppercase;
   font-size: 2em;
   font-family: "Novecento";
-  margin-bottom: 1.5em; }
+  margin-bottom: 1.5em;
+  text-align: center; }
 
 p {
   font-family: "Merriweather";

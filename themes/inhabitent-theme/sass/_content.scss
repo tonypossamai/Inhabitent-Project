@@ -55,7 +55,6 @@
 
 /* Front-page */
 
-
 .home .home-hero {
 	background: linear-gradient(180deg,rgba(0,0,0,.4) 0,rgba(0,0,0,.4)), url(../../images/home-hero.jpg),#969696;
 	background-size: cover,cover;
@@ -65,7 +64,15 @@
 	align-items: center;
 	height: 100vh;
 }
+.journal-section {
+	display: flex;
 
+	.title-section {
+		order: 1;
+		flex-wrap: nowrap;
+	}
+
+}
 
 
 /* FIND US PAGE */ 
@@ -89,27 +96,31 @@
 }
 
 /* ABOUT PAGE */
-
-.wp-block-cover {
+.hero-image-header {
+	margin-bottom: 3em;
 	height: 100vh;
+}
+.entry-header h1 {
+	display: none;
+}
+.entry-content h1{
+	display: flex;
+	font-size: 3.2em;
+	color: #fff;
 
 }
-.wp-block-cover-text {
-	font-family: $font__nove;
-	font-size: 2.1rem;
-
-}
-.entry-content>:not(.wp-block-cover) {
+.entry-content>:not(.entry-header) {
 	margin: 30px auto;
-    max-width: 900px;
+	max-width: 900px;
 }
-
-p b {
+	
+.page-template-page-about .entry-content h2 {
 	color: #2f1339;
 	text-transform: uppercase;
 	font-size: 2em;
 	font-family: $font__nove;
 	margin-bottom: 1.5em;
+	text-align: center;
 
 }
 p {
