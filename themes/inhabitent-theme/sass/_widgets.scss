@@ -14,8 +14,10 @@
 /* Search widget. */
 
 .widget_search .search-submit {
-	display: none;
+
 }
-.widget-area {
-	width: 20%;
+#secondary .widget-area {
+	background-color: red;
+	display: flex;
+	flex-direction: column;
 }

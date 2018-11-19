@@ -4,39 +4,38 @@
 
 /* Index Main */
 
-main {
-	width: 1120px;
-}
+
+
 
 /* Posts and pages */
 
-.sticky {
-	display: block;
-}
+// .sticky {
+// 	display: block;
+// }
 
-.hentry {
-	margin: 0 0 $base__space-unit;
-}
+// .hentry {
+// 	margin: 0 0 $base__space-unit;
+// }
 
-.updated:not(.published){
-	display: none;
-}
+// .updated:not(.published){
+// 	display: none;
+// }
 
-.single .byline,
-.group-blog .byline {
-	display: inline;
-}
+// .single .byline,
+// .group-blog .byline {
+// 	display: inline;
+// }
 
-.page-content,
-.entry-content,
-.entry-summary {
-	margin: $base__space-unit 0 0;
-}
+// .page-content,
+// .entry-content,
+// .entry-summary {
+// 	margin: $base__space-unit 0 0;
+// }
 
-.page-links {
-	clear: both;
-	margin: 0 0 $base__space-unit;
-}
+// .page-links {
+// 	clear: both;
+// 	margin: 0 0 $base__space-unit;
+// }
 
 /* Asides */
 
@@ -56,12 +55,9 @@ main {
 
 /* Front-page */
 
-.home-hero {
-	background: linear-gradient(180deg,rgba(0,0,0,.4) 0,rgba(0,0,0,.4)), url(images/home-hero.jpg),#969696;
-}
 
-.home-hero {
-
+.home .home-hero {
+	background: linear-gradient(180deg,rgba(0,0,0,.4) 0,rgba(0,0,0,.4)), url(../../images/home-hero.jpg),#969696;
 	background-size: cover,cover;
 	display: flex;
 	flex-direction: column;
@@ -69,3 +65,57 @@ main {
 	align-items: center;
 	height: 100vh;
 }
+
+
+
+/* FIND US PAGE */ 
+
+.page-id-20 {
+	padding: 0px 180px;
+	display: flex;
+
+	.p3 {
+		color: #2f1339;
+		text-transform: uppercase;
+		font-size: 2.1rem;
+		margin-bottom: 1.5rem;
+	}
+	.p4 {
+		color: #404040;
+		font-family: 'Merriweather';
+		font-size: 1rem;
+		line-height: 1.75;
+	}
+}
+
+/* ABOUT PAGE */
+
+.wp-block-cover {
+	height: 100vh;
+
+}
+.wp-block-cover-text {
+	font-family: $font__nove;
+	font-size: 2.1rem;
+
+}
+.entry-content>:not(.wp-block-cover) {
+	margin: 30px auto;
+    max-width: 900px;
+}
+
+p b {
+	color: #2f1339;
+	text-transform: uppercase;
+	font-size: 2em;
+	font-family: $font__nove;
+	margin-bottom: 1.5em;
+
+}
+p {
+	font-family: $font__merri;
+	font-size: 1.1em;
+	line-height: 2em;
+}
+
+

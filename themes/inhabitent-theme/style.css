@@ -300,7 +300,6 @@ address {
 
 pre {
   background: #eee;
-  font-family: "Courier 10 Pitch", Courier, monospace;
   font-size: 15px;
   font-size: 0.9375rem;
   line-height: 1.6;
@@ -308,11 +307,6 @@ pre {
   max-width: 100%;
   overflow: auto;
   padding: 1.6rem; }
-
-code, kbd, tt, var {
-  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-  font-size: 15px;
-  font-size: 0.9375rem; }
 
 abbr, acronym {
   border-bottom: 1px dotted #666;
@@ -340,10 +334,6 @@ html {
   /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
   -webkit-box-sizing: inherit;
           box-sizing: inherit; }
-
-body {
-  background: #fff;
-  /* Fallback for when there is no custom background color defined. */ }
 
 blockquote,
 q {
@@ -398,35 +388,24 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  border: 1px solid;
-  border-color: #ccc #ccc #bbb;
-  border-radius: 3px;
-  background: #e6e6e6;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 12px;
-  font-size: 0.75rem;
+  font-size: 19.2px;
+  font-size: 1.2rem;
   line-height: 1;
-  padding: .6rem 1rem .4rem;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
+  background: #248a83;
+  border: none;
+  border-radius: 0;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Novecento';
+  font-weight: 100;
+  padding: .75rem 1.5rem;
+  text-decoration: none;
+  text-transform: uppercase; }
   button:hover,
   input[type="button"]:hover,
   input[type="reset"]:hover,
   input[type="submit"]:hover {
-    border-color: #ccc #bbb #aaa;
-    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02); }
-  button:active, button:focus,
-  input[type="button"]:active,
-  input[type="button"]:focus,
-  input[type="reset"]:active,
-  input[type="reset"]:focus,
-  input[type="submit"]:active,
-  input[type="submit"]:focus {
-    border-color: #aaa #bbb #bbb;
-    -webkit-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
-            box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15); }
+    background-color: #0e645e; }
 
 /* Fields */
 input[type="text"],
@@ -461,30 +440,15 @@ textarea {
 # Navigation
 --------------------------------------------------------------*/
 /* Links */
-a {
-  color: royalblue; }
-  a:visited {
-    color: purple; }
-  a:hover, a:focus, a:active {
-    color: midnightblue; }
-  a:focus {
-    outline: thin dotted; }
-  a:hover, a:active {
-    outline: 0; }
-
 /* Menus */
 .main-navigation {
-  clear: both;
-  display: block;
-  float: left; }
+  padding: 10px; }
   .main-navigation ul {
     display: none;
     list-style: none;
     margin: 0;
     padding-left: 0; }
     .main-navigation ul ul {
-      -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-              box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
       float: left;
       position: absolute;
       top: 1.5rem;
@@ -544,20 +508,47 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-image: url(./images/home-hero.jpg);
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 10px 150px;
+  padding: 10px 180px;
   background: transparent;
   position: relative; }
   .site-header .logo {
     width: 30%; }
-  .site-header .main-navigation {
-    padding: 10px; }
-  .site-header .menu-item a {
-    color: #248A83;
+  .site-header #primary-menu {
+    -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2); }
+  .site-header .menu .menu-item a {
+    color: white;
+    font-size: 1.2em;
     padding-left: 20px; }
+
+.home header.site-header {
+  background-color: transparent;
+  position: absolute;
+  z-index: 3; }
+
+/* Widget Area */
+/* Footer */
+.site-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: url(../../../../themes/inhabitent-theme/images/dark-wood@2x.png);
+  background-size: 512px 512px;
+  width: 100%;
+  height: 300px;
+  color: #ffffff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .site-footer p {
+    font-family: "Novecento";
+    font-size: 1rem; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -570,7 +561,7 @@ a {
   width: 1px;
   overflow: hidden; }
   .screen-reader-text:focus {
-    background-color: #f1f1f1;
+    background-color: #ffffff;
     border-radius: 3px;
     -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
             box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
@@ -627,42 +618,21 @@ a {
     max-width: 100%; }
 
 /* Search widget. */
-.widget_search .search-submit {
-  display: none; }
-
-.widget-area {
-  width: 20%; }
+#secondary .widget-area {
+  background-color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
 
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
 /* Index Main */
-main {
-  width: 1120px; }
-
 /* Posts and pages */
-.sticky {
-  display: block; }
-
-.hentry {
-  margin: 0 0 1.5rem; }
-
-.updated:not(.published) {
-  display: none; }
-
-.single .byline,
-.group-blog .byline {
-  display: inline; }
-
-.page-content,
-.entry-content,
-.entry-summary {
-  margin: 1.5rem 0 0; }
-
-.page-links {
-  clear: both;
-  margin: 0 0 1.5rem; }
-
 /* Asides */
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
@@ -676,11 +646,9 @@ main {
   display: block; }
 
 /* Front-page */
-.home-hero {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(images/home-hero.jpg), #969696;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.4)), url(images/home-hero.jpg), #969696; }
-
-.home-hero {
+.home .home-hero {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(../../images/home-hero.jpg), #969696;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.4)), url(../../images/home-hero.jpg), #969696;
   background-size: cover,cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -696,6 +664,47 @@ main {
       -ms-flex-align: center;
           align-items: center;
   height: 100vh; }
+
+/* FIND US PAGE */
+.page-id-20 {
+  padding: 0px 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .page-id-20 .p3 {
+    color: #2f1339;
+    text-transform: uppercase;
+    font-size: 2.1rem;
+    margin-bottom: 1.5rem; }
+  .page-id-20 .p4 {
+    color: #404040;
+    font-family: 'Merriweather';
+    font-size: 1rem;
+    line-height: 1.75; }
+
+/* ABOUT PAGE */
+.wp-block-cover {
+  height: 100vh; }
+
+.wp-block-cover-text {
+  font-family: "Novecento";
+  font-size: 2.1rem; }
+
+.entry-content > :not(.wp-block-cover) {
+  margin: 30px auto;
+  max-width: 900px; }
+
+p b {
+  color: #2f1339;
+  text-transform: uppercase;
+  font-size: 2em;
+  font-family: "Novecento";
+  margin-bottom: 1.5em; }
+
+p {
+  font-family: "Merriweather";
+  font-size: 1.1em;
+  line-height: 2em; }
 
 /*--------------------------------------------------------------
 # Media
@@ -756,8 +765,3 @@ object {
 
 .gallery-caption {
   display: block; }
-
-/*--------------------------------------------------------------
-# Page Templates
---------------------------------------------------------------*/
-/* Front page */

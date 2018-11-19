@@ -1,6 +1,6 @@
 <?php
 /**
- * Template name: Find Us Page.
+ * Template name: About Page.
  *
  * @package RED_Starter_Theme
  */
@@ -11,7 +11,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
-
+				
 				<?php get_template_part( 'template-parts/content', 'page' ); ?>
 
 			<?php endwhile; // End of the loop. ?>
@@ -20,6 +20,4 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
