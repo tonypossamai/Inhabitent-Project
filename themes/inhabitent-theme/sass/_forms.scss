@@ -9,18 +9,17 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 
-	@include font-size(1.2);
+	@include font-size(1);
 	line-height: 1;
 	background: #248a83;
     border: none;
     border-radius: 0;
     color: #fff;
     cursor: pointer;
-	font-family: 'Novecento';
-	font-weight: 100;
+	font-family: $font__nove;
     padding: .75rem 1.5rem;
     text-decoration: none;
-    text-transform: uppercase;
+	text-transform: uppercase;
 
 	&:hover {
 	background-color: rgb(14, 100, 94);

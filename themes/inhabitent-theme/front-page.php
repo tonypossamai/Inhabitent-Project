@@ -17,12 +17,12 @@ get_header(); ?>
 
 			<section class="shop-section" >
 				<h1>SHOP STUFF</h1>
-				<div class="product-tax-section">
+				<div class="product-tax-blocks">
 					<?php foreach (get_terms(array("taxonomy" => "product-type")) as $product_type): ?>
-						<div class="product-tax">
+						<div class="product-wrapper">
 						<img src="<?php echo get_template_directory_uri(); ?>/images/product-type-icons/<?php echo $product_type->slug ?>.svg">
 								<p><?php echo $product_type->description ?></p>
-							<a href="<?php echo get_term_link($product_type->slug, 'product-type' ); ?>"><?php echo $product_type->name ?> STUFF</a>
+							<button href="<?php echo get_term_link($product_type->slug, 'product-type' ); ?>"><?php echo $product_type->name ?> STUFF</button>
 						</div>
 					<?php endforeach;?>
 				</div>
@@ -30,23 +30,28 @@ get_header(); ?>
 
 
 			<section class="journal-section">
-				<h1 class="title-section">INHABITENT JOURNAL</h1>
-					<?php
-						$args = array( 'post_type' => 'post', 'post_per_page' => '3' );
-						$news_posts = get_posts( $args ); // returns an array of posts
-					?>
+				<h1>INHABITENT JOURNAL</h1>
+					<div class="journal-container">
+		
+						<?php
+							$args = array( 'post_type' => 'post', 'post_per_page' => '3' );
+							$news_posts = get_posts( $args ); // returns an array of posts
+						?>
+						<?php foreach ( $news_posts as $post ) : setup_postdata( $post ); ?>
+						
+						<div class="journal-wrapper">
+							<div class="post-image"><?php echo the_post_thumbnail();?></div>
+							<div class="post-wrapper">
+								<p class="post-date"><?php echo get_the_date(); ?> /
+								<?php echo $post->comment_count; ?> comments </p>	
+								<a href="<?php the_permalink();?>"><h3 class="journal-title"><?php echo the_title(); ?></h3></a>
+								<button><a href="<?php get_permalink(); ?>">READ ENTRY<a></button>
+							</div>
+						</div>
 
-					<?php foreach ( $news_posts as $post ) : setup_postdata( $post ); ?>
-				<div class="journal-content">
-						<div class="post-image"><?php echo the_post_thumbnail();?></div>
-						<p class="post-date"><?php echo get_the_date(); ?> /
-						<?php echo $post->comment_count; ?> comments </p>
+						<?php endforeach; wp_reset_postdata(); ?>
 
-						<a href="<?php the_permalink();?>"><h2 class="journal-title"><?php echo the_title(); ?></h2></a>
-						<!-- <p class="journal-content"></p> -->
-
-					<?php endforeach; wp_reset_postdata(); ?>
-				</div>
+					</div>
 			</section>
 
 
