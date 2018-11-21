@@ -1,22 +1,31 @@
 <?php
 /**
- * The template for displaying the footer.
- *
- * @package RED_Starter_Theme
- */
+* The template for displaying the footer.
+*
+* @package RED_Starter_Theme
+*/
 
 ?>
 
-			</div><!-- #content -->
+            </div><!-- #content -->
 
 			<footer id="colophon" class="site-footer" role="contentinfo">
-				<div class="site-info">
-					<p><?php echo 'COPYRIGHT © 2019 INHABITENT'; ?></p>
-				</div><!-- .site-info -->
-			</footer><!-- #colophon -->
-		</div><!-- #page -->
+                <div class="content">
+                    <?php dynamic_sidebar( 'first-footer-widget-area' ); ?>
+                    <?php dynamic_sidebar( 'second-footer-widget-area' ); ?>
+                    <?php dynamic_sidebar( 'third-footer-widget-area' ); ?>
+                    <?php dynamic_sidebar( 'fourth-footer-widget-area' ); ?>
+                </div>
 
-		<?php wp_footer(); ?>
+                <div class="site-info">
+                    <div class="container">COPYRIGHT © <?php echo date('Y');?> INHABITENT</div>
+                    <!-- <a href="<?php echo esc_url( 'https://wordpress.org/' ); ?>"><?php printf( esc_html( 'Proudly powered by %s' ), 'WordPress' ); ?></a> -->
+                </div><!-- .site-info -->
 
-	</body>
+            </footer><!-- #colophon -->
+        </div><!-- #page -->
+
+        <?php wp_footer(); ?>
+
+    </body>
 </html>

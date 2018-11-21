@@ -17,7 +17,7 @@ get_header(); ?>
 
 			<section class="shop-section" >
 				<h1>SHOP STUFF</h1>
-				<div class="product-tax-blocks">
+					<div class="product-tax-blocks">
 					<?php foreach (get_terms(array("taxonomy" => "product-type")) as $product_type): ?>
 						<div class="product-wrapper">
 						<img src="<?php echo get_template_directory_uri(); ?>/images/product-type-icons/<?php echo $product_type->slug ?>.svg">
@@ -45,8 +45,8 @@ get_header(); ?>
 								<p class="post-date"><?php echo get_the_date(); ?> /
 								<?php echo $post->comment_count; ?> comments </p>	
 								<a href="<?php the_permalink();?>"><h3 class="journal-title"><?php echo the_title(); ?></h3></a>
-								<button><a href="<?php get_permalink(); ?>">READ ENTRY<a></button>
 							</div>
+								<button class="journal-button"><a href="<?php the_permalink(); ?>">READ ENTRY</a></button>
 						</div>
 
 						<?php endforeach; wp_reset_postdata(); ?>
@@ -55,22 +55,27 @@ get_header(); ?>
 			</section>
 
 
-			<section class="adventures-section">
-				<h1 class="title-section">LATEST ADVENTURES</h1>
-					<?php
-						$args = array( 'post_type' => 'adventures', 'order => ASC', 'post_per_page' => '4' );
-						$adventure_posts = get_posts( $args ); // returns an array of posts
-					?>
+			<section class="adventures container">
+				<h1>LATEST ADVENTURES</h1>
+					<div class="adventures-content">
+						
+						<?php
+							$args = array( 'post_type' => 'adventures', 'order => ASC', 'post_per_page' => '4' );
+							$adventure_posts = get_posts( $args ); // returns an array of posts
+						?>
 
-					<?php foreach ( $adventure_posts as $post ) : setup_postdata( $post ); ?>
+						<?php foreach ( $adventure_posts as $post ) : setup_postdata( $post ); ?>
 
-				<div class="adventures-content">
-					<div class="post-image"><?php echo the_post_thumbnail();?></div>
+						<div class="adventures-wrapper">
+							<?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full');?>
+							<div class="adventure-img" style="background-image: url('<?php echo $image[0] ?>')";>
+								<a href="<?php the_permalink();?>"><h2 class="adventures-title"><?php echo the_title(); ?></h2></a>
+								<a href="<?php the_permalink(); ?>">READ MORE</a>
+							</div>
+						</div>
 
-					<a href="<?php echo the_excerpt();?>"><h2 class="adventures-title"><?php echo the_title(); ?></h2></a>
-
-					<?php endforeach; wp_reset_postdata(); ?>
-				</div>
+						<?php endforeach; wp_reset_postdata(); ?>
+					</div>
 			</section>
 
 
