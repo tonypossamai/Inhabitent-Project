@@ -8,6 +8,7 @@
 /* Menus */
 
 .main-navigation {
+	font-family: sans-serif;
 	padding: 10px;  
 
 
@@ -37,7 +38,9 @@
 			}
 
 			a {
-				width: 200px;
+				color: #248a83;
+				text-decoration: none;
+				}
 			}
 
 			:hover > a,
@@ -53,7 +56,7 @@
 		li.focus > ul {
 			left: auto;
 		}
-	}
+
 	li {
 		float: left;
 		position: relative;
@@ -140,17 +143,13 @@
 	align-items: center;
 	border: 1px solid #e1e1e1;
 	.logo {
-		width: 33%;
-		
+		width: 27%;
 	}
 	.menu .menu-item a {
 		color: $color__green-brand;
 		font-size: 1.1em;
 		padding-left: 20px;
-
     }
-
-	
 }
 
 .home header.site-header, .page-template-page-about header.site-header  {
@@ -179,7 +178,6 @@
 body footer.site-footer {
     background: url(../../images/dark-wood@2x.png);
     background-size: 512px 512px;
-    margin-top: 4em;
     color: #fff;
     
     .site-info {

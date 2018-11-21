@@ -2,10 +2,26 @@
 
 /* FIND US PAGE */ 
 
-.page-id-20 {
-	padding: 0px 180px;
-	display: flex;
+body:not(.home):not(.page-template-page-about):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure) .site-content {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+	width: 1120px;
+	
+	.content-area {
+		border-right: 1px solid #e1e1e1;
+		padding-right: 5%;
+		padding-bottom: 3rem;
+		width: 73%;
+	}
+}
 
+
+.post-20 {
+	.entry-header h1 {
+		display: block;
+	}
+}
 	.p3 {
 		color: #2f1339;
 		text-transform: uppercase;
@@ -17,6 +33,40 @@
 		font-family: 'Merriweather';
 		font-size: 1rem;
 		line-height: 1.75;
+	}
+
+
+/* FORM */
+
+div.wpcf7 {
+    margin: 0;
+	padding: 0;
+	
+	.screen-reader-response {
+		position: absolute;
+		overflow: hidden;
+		clip: rect(1px, 1px, 1px, 1px);
+		height: 1px;
+		width: 1px;
+		margin: 0;
+		padding: 0;
+		border: 0;
+	}
+	label {
+		color: #2f1339;
+		display: block;
+		font-family: sans-serif;
+		font-size: 17.6px;
+		font-size: 1.1rem;
+		margin-bottom: .5rem;
+		text-transform: uppercase;
+
+		.required {
+			color: #d99054;
+		}
+	}
+	.wpcf7-form-control-wrap {
+		position: relative;
 	}
 }
 

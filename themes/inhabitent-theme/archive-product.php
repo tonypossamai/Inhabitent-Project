@@ -9,33 +9,52 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+		
+		<div class="container">
+			<?php if ( have_posts() ) : ?>
 
-		<?php if ( have_posts() ) : ?>
+				<header class="page-header">
+					<h1 class="page-title">SHOP STUFF</h1>
 
-			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
+					<ul class="product-type-list">
+					<?php
+                        $terms = get_terms( array(
+                        'taxonomy' => 'product-type',
+                        'hide_empty' => false));
+                    ?>
+						<?php foreach ( $terms as $term ) : ?>
+						<li>
+							<p>
+								<a href="<?php echo get_term_link($term); ?>"><?php echo $term->name; ?></a>
+							</p>
+						</li>
+						<?php endforeach; wp_reset_postdata(); ?>
+					</ul>
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+				</header><!-- .page-header -->
 
-				<?php
-					get_template_part( 'template-parts/content' );
-				?>
+			<div class="product-grid">	
 
-			<?php endwhile; ?>
+					<?php /* Start the Loop */ ?>
+				<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php the_posts_navigation(); ?>
+					<?php
+						get_template_part( 'template-parts/content', 'product' );
+					?>
 
-		<?php else : ?>
+				<?php endwhile; ?>
 
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
+					<?php the_posts_navigation(); ?>
 
-		<?php endif; ?>
-		<?php get_sidebar(); ?>
+				<?php else : ?>
+
+					<?php get_template_part( 'template-parts/content', 'none' ); ?>
+
+				<?php endif; ?>
+				
+			</div>
+
+		</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

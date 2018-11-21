@@ -16,11 +16,11 @@ get_header(); ?>
 			<h3><?php the_title();?></h3>
 			<?php echo CFS()->get( 'price' ); // Get price field?> 
 			<p><?php the_content();?></p>
+
 		<?php endwhile; // End of the loop. ?>
 	</section>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

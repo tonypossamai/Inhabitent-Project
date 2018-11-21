@@ -2,33 +2,38 @@
 # Typography
 --------------------------------------------------------------*/
 
-body,
-button,
-input,
-select,
-textarea {
-	color: $color__text-main;
-	font-family: $font__main;
-	@include font-size(1);
-	line-height: $font__line-height-body;
-}
 
+body, button, input, select, textarea {
+	color: $color__text-main;
+	font-family: $font__merri;
+    font-size: 1rem;
+	line-height: 1.75;
+}
 /* Headings */
 
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
 }
 
+h1 {
+	font-family: $font__nove;
+	font-size: 2.4rem;
+    font-weight: 300;
+	margin-bottom: .5rem;
+}
 h2 {
-	clear: both;
+    color: #2f1339;
+    font-size: 2.1rem;
+    margin-bottom: 1.5rem;
     font-family: $font__nove;
     letter-spacing: 2px;
-    text-transform: uppercase;
+	text-transform: uppercase;
+	text-decoration: none;
 }
 h3 {
+	font-family: $font__nove;
 	font-size: 1.4em;
 	margin: 0 auto;
-	font-family: $font__nove;
 	letter-spacing: 2px;
 }
 

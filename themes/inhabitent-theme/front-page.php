@@ -16,13 +16,13 @@ get_header(); ?>
 			
 
 			<section class="shop-section" >
-				<h1>SHOP STUFF</h1>
+				<h2>SHOP STUFF</h2>
 					<div class="product-tax-blocks">
 					<?php foreach (get_terms(array("taxonomy" => "product-type")) as $product_type): ?>
 						<div class="product-wrapper">
 						<img src="<?php echo get_template_directory_uri(); ?>/images/product-type-icons/<?php echo $product_type->slug ?>.svg">
 								<p><?php echo $product_type->description ?></p>
-							<button href="<?php echo get_term_link($product_type->slug, 'product-type' ); ?>"><?php echo $product_type->name ?> STUFF</button>
+							<a class="btn" href="<?php echo get_term_link($product_type->slug, 'product-type' ); ?>"><?php echo $product_type->name ?> STUFF</a>
 						</div>
 					<?php endforeach;?>
 				</div>
@@ -30,11 +30,11 @@ get_header(); ?>
 
 
 			<section class="journal-section">
-				<h1>INHABITENT JOURNAL</h1>
+				<h2>INHABITENT JOURNAL</h2>
 					<div class="journal-container">
 		
 						<?php
-							$args = array( 'post_type' => 'post', 'post_per_page' => '3' );
+							$args = array( 'post_type' => 'post', 'post_per_page' => 3 );
 							$news_posts = get_posts( $args ); // returns an array of posts
 						?>
 						<?php foreach ( $news_posts as $post ) : setup_postdata( $post ); ?>
@@ -44,9 +44,9 @@ get_header(); ?>
 							<div class="post-wrapper">
 								<p class="post-date"><?php echo get_the_date(); ?> /
 								<?php echo $post->comment_count; ?> comments </p>	
-								<a href="<?php the_permalink();?>"><h3 class="journal-title"><?php echo the_title(); ?></h3></a>
+								<h3 class="journal-title"><?php echo the_title(); ?><a href="<?php the_permalink();?>"></a></h3>
 							</div>
-								<button class="journal-button"><a href="<?php the_permalink(); ?>">READ ENTRY</a></button>
+								<a class="black-btn" href="<?php the_permalink(); ?>">READ ENTRY</a>
 						</div>
 
 						<?php endforeach; wp_reset_postdata(); ?>
@@ -56,7 +56,7 @@ get_header(); ?>
 
 
 			<section class="adventures container">
-				<h1>LATEST ADVENTURES</h1>
+				<h2>LATEST ADVENTURES</h2>
 					<ul>
 						<?php
 							$args = array( 'post_type' => 'adventures', 'order => ASC', 'post_per_page' => '4' );
@@ -76,8 +76,8 @@ get_header(); ?>
 						</li>
 							<?php endforeach; wp_reset_postdata(); ?>
 					</ul>
-					<p class="see-more">MORE ADVENTURES
-						<a href="<?php the_permalink(); ?>/adventures/"></a>
+					<p class="see-more">
+						<a class="btn" href="<?php the_permalink(); ?>/adventures/">MORE ADVENTURES</a>
 					</p>
 
 					

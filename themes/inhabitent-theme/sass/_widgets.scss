@@ -13,3 +13,64 @@
 
 /* Search widget. */
 
+
+
+
+/* Sidebar Widget */ 
+
+body:not(.home):not(.page-template-about):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure) .widget-area {
+    padding-left: 5%;
+    width: 27%;
+}
+
+body:not(.home):not(.page-template-about):not(.single-adventure) .content-area, body:not(.home):not(.page-template-about):not(.single-adventure) .widget-area {
+    padding-top: 2rem;
+
+}
+.widget {
+	margin: 0 0 3rem;
+	h2 {
+		font-size: 1.5rem;
+	}
+	p {
+		margin-bottom: .5rem;
+	}
+	.day-of-week {
+		font-weight: 700;
+	}
+	ul {
+		list-style-type: none;
+		margin-left: 0;
+		padding-left: 0;
+	}
+
+	.contact-meta {
+		display: flex;
+
+		a {
+			color: #248a83;
+			text-decoration: none;
+		}
+
+		i {
+			line-height: 1.8;
+			margin-right: .5rem;
+			width: 20px;
+		}
+		.fa {
+			display: inline-block;
+			font-size: inherit;
+			text-rendering: auto;
+		}
+		.fa-phone:before {
+			content: "\f095";
+		}
+		.fa-envelope:before {
+			content: "\f0e0";
+		}
+		.fa-map-marker:before {
+			content: "\f041";
+		}
+	}
+
+}

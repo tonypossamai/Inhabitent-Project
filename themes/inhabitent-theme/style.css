@@ -270,31 +270,35 @@ th {
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
-body,
-button,
-input,
-select,
-textarea {
+body, button, input, select, textarea {
   color: #404040;
-  font-family: sans-serif;
-  font-size: 16px;
+  font-family: "Merriweather";
   font-size: 1rem;
-  line-height: 1.5; }
+  line-height: 1.75; }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   clear: both; }
 
+h1 {
+  font-family: "Novecento";
+  font-size: 2.4rem;
+  font-weight: 300;
+  margin-bottom: .5rem; }
+
 h2 {
-  clear: both;
+  color: #2f1339;
+  font-size: 2.1rem;
+  margin-bottom: 1.5rem;
   font-family: "Novecento";
   letter-spacing: 2px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  text-decoration: none; }
 
 h3 {
+  font-family: "Novecento";
   font-size: 1.4em;
   margin: 0 auto;
-  font-family: "Novecento";
   letter-spacing: 2px; }
 
 /* Copy */
@@ -358,6 +362,11 @@ table {
   margin: 0 0 1.5rem;
   width: 100%; }
 
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1120px; }
+
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -386,21 +395,56 @@ input[type="submit"] {
     border: none;
     color: white; }
 
+.black-btn, .btn, .white-btn, button, input[type=button], input[type=reset], input[type=submit] {
+  background: #248a83;
+  border: none;
+  border-radius: 0;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Novecento";
+  font-size: 14.4px;
+  font-size: .9rem;
+  line-height: 1;
+  padding: .75rem 1.5rem;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+.black-btn:active, .black-btn:focus, .black-btn:hover, .btn:active, .btn:focus, .btn:hover, .white-btn:active, .white-btn:focus, .white-btn:hover, button:active, button:focus, button:hover, input[type=button]:active, input[type=button]:focus, input[type=button]:hover, input[type=reset]:active, input[type=reset]:focus, input[type=reset]:hover, input[type=submit]:active, input[type=submit]:focus, input[type=submit]:hover {
+  background: #19625d;
+  color: #fff; }
+
+.black-btn:active, .black-btn:focus, .black-btn:hover, .white-btn:active, .white-btn:focus, .white-btn:hover {
+  background-color: #248a83;
+  border: 1px solid #248a83;
+  color: #fff; }
+
+.white-btn {
+  border: 1px solid #fff;
+  color: #fff; }
+
+.black-btn {
+  border: 1px solid #000;
+  color: #000; }
+
+.black-btn, .white-btn {
+  background-color: transparent; }
+
 /* Fields */
-input[type="text"],
 input[type="email"],
-input[type="url"],
 input[type="password"],
 input[type="search"],
+input[type="text"],
+input[type="url"],
 textarea {
   color: #666;
-  border: 1px solid #ccc;
-  border-radius: 3px; }
-  input[type="text"]:focus,
+  background-color: #f4f4f4;
+  border: 1px solid #e1e1e1;
+  border-radius: 0; }
   input[type="email"]:focus,
-  input[type="url"]:focus,
   input[type="password"]:focus,
   input[type="search"]:focus,
+  input[type="text"]:focus,
+  input[type="url"]:focus,
   textarea:focus {
     color: #111; }
 
@@ -410,6 +454,13 @@ input[type="url"],
 input[type="password"],
 input[type="search"] {
   padding: 3px; }
+
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="text"],
+input[type="url"] {
+  padding: .3rem; }
 
 textarea {
   padding-left: 3px;
@@ -421,6 +472,7 @@ textarea {
 /* Links */
 /* Menus */
 .main-navigation {
+  font-family: sans-serif;
   padding: 10px; }
   .main-navigation ul {
     display: none;
@@ -440,10 +492,11 @@ textarea {
       .main-navigation ul ul li.focus > ul {
         left: 100%; }
       .main-navigation ul ul a {
-        width: 200px; }
-    .main-navigation ul li:hover > ul,
-    .main-navigation ul li.focus > ul {
-      left: auto; }
+        color: #248a83;
+        text-decoration: none; }
+  .main-navigation li:hover > ul,
+  .main-navigation li.focus > ul {
+    left: auto; }
   .main-navigation li {
     float: left;
     position: relative; }
@@ -515,7 +568,7 @@ textarea {
           align-items: center;
   border: 1px solid #e1e1e1; }
   .site-header.reverse .logo {
-    width: 33%; }
+    width: 27%; }
   .site-header.reverse .menu .menu-item a {
     color: #248A83;
     font-size: 1.1em;
@@ -530,7 +583,6 @@ textarea {
 body footer.site-footer {
   background: url(../../images/dark-wood@2x.png);
   background-size: 512px 512px;
-  margin-top: 4em;
   color: #fff; }
   body footer.site-footer .site-info {
     padding: 1.5rem 0;
@@ -646,6 +698,48 @@ body footer.site-footer {
     max-width: 100%; }
 
 /* Search widget. */
+/* Sidebar Widget */
+body:not(.home):not(.page-template-about):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure) .widget-area {
+  padding-left: 5%;
+  width: 27%; }
+
+body:not(.home):not(.page-template-about):not(.single-adventure) .content-area, body:not(.home):not(.page-template-about):not(.single-adventure) .widget-area {
+  padding-top: 2rem; }
+
+.widget {
+  margin: 0 0 3rem; }
+  .widget h2 {
+    font-size: 1.5rem; }
+  .widget p {
+    margin-bottom: .5rem; }
+  .widget .day-of-week {
+    font-weight: 700; }
+  .widget ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0; }
+  .widget .contact-meta {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .widget .contact-meta a {
+      color: #248a83;
+      text-decoration: none; }
+    .widget .contact-meta i {
+      line-height: 1.8;
+      margin-right: .5rem;
+      width: 20px; }
+    .widget .contact-meta .fa {
+      display: inline-block;
+      font-size: inherit;
+      text-rendering: auto; }
+    .widget .contact-meta .fa-phone:before {
+      content: "\f095"; }
+    .widget .contact-meta .fa-envelope:before {
+      content: "\f0e0"; }
+    .widget .contact-meta .fa-map-marker:before {
+      content: "\f041"; }
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
@@ -664,6 +758,76 @@ body footer.site-footer {
   display: block; }
 
 /*-----------------------------------------------------------------------*/
+/* SHOP STUFF PAGE - arquive-product.php */
+.post-type-archive-product .page-header, .tax-product-type .page-header {
+  border-bottom: 1px dashed #c8c8c8;
+  margin-bottom: 3rem;
+  text-align: center; }
+  .post-type-archive-product .page-header .product-type-list, .tax-product-type .page-header .product-type-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-family: "Novecento";
+    font-size: 1.2rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+    text-transform: uppercase; }
+    .post-type-archive-product .page-header .product-type-list li, .tax-product-type .page-header .product-type-list li {
+      margin: 0 1.5rem; }
+    .post-type-archive-product .page-header .product-type-list a, .tax-product-type .page-header .product-type-list a {
+      color: #248a83;
+      text-decoration: none; }
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1.5rem;
+  margin-bottom: 1.5rem; }
+  .product-grid .product-grid-item {
+    border: 1px solid #e1e1e1; }
+    .product-grid .product-grid-item .wp-post-image {
+      left: 50%;
+      max-height: 250px;
+      max-width: none;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translate(-50%, -52%);
+              transform: translate(-50%, -52%);
+      width: auto; }
+    .product-grid .product-grid-item .thumbnail-wrapper {
+      background-color: #e1e1e1;
+      height: 250px;
+      overflow: hidden;
+      position: relative; }
+    .product-grid .product-grid-item .product-info {
+      font-size: 14.4px;
+      font-size: .9rem;
+      padding: .75rem 1rem; }
+      .product-grid .product-grid-item .product-info .price {
+        float: right;
+        padding-left: .25rem;
+        background: #fff; }
+      .product-grid .product-grid-item .product-info .entry-title {
+        background: #fff;
+        display: inline;
+        font-size: 16px;
+        font-size: 1rem;
+        font-weight: 400;
+        font-family: "Merriweather";
+        letter-spacing: 0;
+        line-height: 1.75;
+        padding-right: .25rem;
+        text-transform: none; }
+        .product-grid .product-grid-item .product-info .entry-title:before {
+          float: left;
+          width: 0;
+          white-space: nowrap;
+          content: "..................................................."; }
+
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
@@ -728,9 +892,10 @@ object {
 # Content
 --------------------------------------------------------------*/
 /* FRONT PAGE */
-.home h1 {
-  font-size: 2.8rem;
-  font-weight: 300;
+.home h2 {
+  font-size: 38.4px;
+  font-size: 2.4rem;
+  font-weight: 400;
   margin-bottom: 3.75rem;
   text-align: center; }
 
@@ -787,7 +952,8 @@ object {
 .journal-wrapper {
   width: 100%;
   border: 1px solid #e1e1e1;
-  margin: 10px; }
+  margin: 10px;
+  height: 420px; }
 
 .journal-wrapper img {
   width: 100%;
@@ -808,53 +974,147 @@ object {
   text-decoration: none;
   color: #248A83; }
 
-.journal-button {
-  border: 1px solid #404040;
-  background-color: white;
-  text-decoration: none;
-  margin: 10px; }
-  .journal-button a {
-    text-decoration: none;
-    color: #404040; }
-    .journal-button a:hover {
-      color: white; }
-
 /*-----------------------------------------------------------------------*/
-/* ADVENTURES SECTION */
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1120px; }
-  .container .adventures-content {
+/* LATEST ADVENTURES SECTION */
+.home .adventures {
+  margin-bottom: 4.5rem; }
+  .home .adventures ul {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-columns: 1fr 1fr;
-    grid-auto-rows: 260px;
-    grid-gap: 20px;
+    grid-auto-rows: 2fr;
+    grid-gap: 20px 20px;
+    list-style-type: none;
     margin-left: 0;
     padding-left: 0;
     width: 100%; }
-  .container .adventures-img:nth-of-type(1) {
-    grid-area: 1 / 1 / 3 / 3; }
-  .container .adventures-img:nth-of-type(2) {
-    grid-area: 1 / 3 / 2 / 5; }
+    .home .adventures ul li {
+      line-height: 1;
+      overflow: hidden;
+      position: relative;
+      width: 100%; }
+      .home .adventures ul li:before {
+        content: " ";
+        display: inline-block;
+        width: 1px;
+        height: 0; }
+      .home .adventures ul li:first-child {
+        grid-column: 1/span 2;
+        grid-row: 1/span 2; }
+        .home .adventures ul li:first-child:before {
+          padding-bottom: calc(100% - 24px); }
+        .home .adventures ul li:first-child .story-info h3 {
+          font-size: 48px;
+          font-size: 3rem; }
+      .home .adventures ul li:nth-child(2) {
+        grid-column: 3/span 2;
+        grid-row: 1/span 1; }
+        .home .adventures ul li:nth-child(2):before {
+          padding-bottom: calc(50% - 12px); }
+      .home .adventures ul li:nth-child(3):before {
+        padding-bottom: calc(50% - 12px); }
+      .home .adventures ul li:nth-child(3) .story-info h3 {
+        font-size: 25.6px;
+        font-size: 1.6rem; }
+      .home .adventures ul li:last-child:before {
+        padding-bottom: calc(50% - 12px); }
+      .home .adventures ul li:last-child .story-info h3 {
+        font-size: 25.6px;
+        font-size: 1.6rem; }
+      .home .adventures ul li .story-wrapper {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1; }
+        .home .adventures ul li .story-wrapper:after {
+          background: rgba(0, 0, 0, 0.35);
+          content: "";
+          height: 100%;
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          z-index: 1; }
+        .home .adventures ul li .story-wrapper img {
+          left: 50%;
+          max-height: 620px;
+          max-width: none;
+          position: absolute;
+          top: 75%;
+          -webkit-transform: translate(-50%, -75%);
+                  transform: translate(-50%, -75%);
+          width: auto; }
+        .home .adventures ul li .story-wrapper .story-info {
+          margin: 1.5rem;
+          position: absolute;
+          z-index: 2; }
+          .home .adventures ul li .story-wrapper .story-info h3 {
+            font-family: "Merriweather";
+            font-weight: 400;
+            margin-top: 24px;
+            text-transform: none; }
+            .home .adventures ul li .story-wrapper .story-info h3 a {
+              color: #fff; }
+  .home .adventures .see-more {
+    margin-top: 2.25rem; }
+    .home .adventures .see-more a {
+      font-size: 1.2rem; }
 
 /* FIND US PAGE */
-.page-id-20 {
-  padding: 0px 180px;
+body:not(.home):not(.page-template-page-about):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure) .site-content {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
-  .page-id-20 .p3 {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1120px; }
+  body:not(.home):not(.page-template-page-about):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure) .site-content .content-area {
+    border-right: 1px solid #e1e1e1;
+    padding-right: 5%;
+    padding-bottom: 3rem;
+    width: 73%; }
+
+.post-20 .entry-header h1 {
+  display: block; }
+
+.p3 {
+  color: #2f1339;
+  text-transform: uppercase;
+  font-size: 2.1rem;
+  margin-bottom: 1.5rem; }
+
+.p4 {
+  color: #404040;
+  font-family: 'Merriweather';
+  font-size: 1rem;
+  line-height: 1.75; }
+
+/* FORM */
+div.wpcf7 {
+  margin: 0;
+  padding: 0; }
+  div.wpcf7 .screen-reader-response {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    width: 1px;
+    margin: 0;
+    padding: 0;
+    border: 0; }
+  div.wpcf7 label {
     color: #2f1339;
-    text-transform: uppercase;
-    font-size: 2.1rem;
-    margin-bottom: 1.5rem; }
-  .page-id-20 .p4 {
-    color: #404040;
-    font-family: 'Merriweather';
-    font-size: 1rem;
-    line-height: 1.75; }
+    display: block;
+    font-family: sans-serif;
+    font-size: 17.6px;
+    font-size: 1.1rem;
+    margin-bottom: .5rem;
+    text-transform: uppercase; }
+    div.wpcf7 label .required {
+      color: #d99054; }
+  div.wpcf7 .wpcf7-form-control-wrap {
+    position: relative; }
 
 /*-----------------------------------------------------------------------*/
 /* ABOUT PAGE */
