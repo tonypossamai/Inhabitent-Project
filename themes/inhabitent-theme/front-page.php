@@ -57,25 +57,30 @@ get_header(); ?>
 
 			<section class="adventures container">
 				<h1>LATEST ADVENTURES</h1>
-					<div class="adventures-content">
-						
+					<ul>
 						<?php
 							$args = array( 'post_type' => 'adventures', 'order => ASC', 'post_per_page' => '4' );
 							$adventure_posts = get_posts( $args ); // returns an array of posts
 						?>
-
 						<?php foreach ( $adventure_posts as $post ) : setup_postdata( $post ); ?>
 
-						<div class="adventures-wrapper">
-							<?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full');?>
-							<div class="adventure-img" style="background-image: url('<?php echo $image[0] ?>')";>
-								<a href="<?php the_permalink();?>"><h2 class="adventures-title"><?php echo the_title(); ?></h2></a>
-								<a href="<?php the_permalink(); ?>">READ MORE</a>
-							</div>
-						</div>
+						<li>
+							<div class="story-wrapper">
+								<?php the_post_thumbnail(); ?>
 
-						<?php endforeach; wp_reset_postdata(); ?>
-					</div>
+								<div class="story-info">
+									<h3 class="entry-title"><a href="<?php the_permalink();?>"><?php echo the_title(); ?></a></h3>
+									<a class="white-btn" href="<?php the_permalink(); ?>">READ MORE</a>
+								</div>
+							</div>
+						</li>
+							<?php endforeach; wp_reset_postdata(); ?>
+					</ul>
+					<p class="see-more">MORE ADVENTURES
+						<a href="<?php the_permalink(); ?>/adventures/"></a>
+					</p>
+
+					
 			</section>
 
 
