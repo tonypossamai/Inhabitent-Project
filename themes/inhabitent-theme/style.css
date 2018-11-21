@@ -525,7 +525,8 @@ textarea {
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
   float: left;
-  width: 50%; }
+  width: 50%;
+  display: none; }
 
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,

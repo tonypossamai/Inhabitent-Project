@@ -11,7 +11,8 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 		
 		<div class="container">
-			<?php if ( have_posts() ) : ?>
+			<?php $wpb_all_query = new WP_Query(array('post_type' => 'product', 'post_status' => 'publish', 'posts_per_page' => -1));?>
+			<?php if ( $wpb_all_query -> have_posts() ) : ?>
 
 				<header class="page-header">
 					<h1 class="page-title">SHOP STUFF</h1>
@@ -20,8 +21,9 @@ get_header(); ?>
 					<?php
                         $terms = get_terms( array(
                         'taxonomy' => 'product-type',
-                        'hide_empty' => false));
-                    ?>
+						'hide_empty' => false));
+					?>
+					
 						<?php foreach ( $terms as $term ) : ?>
 						<li>
 							<p>
@@ -36,7 +38,7 @@ get_header(); ?>
 			<div class="product-grid">	
 
 					<?php /* Start the Loop */ ?>
-				<?php while ( have_posts() ) : the_post(); ?>
+				<?php while ( $wpb_all_query -> have_posts() ) : $wpb_all_query -> the_post(); ?>
 
 					<?php
 						get_template_part( 'template-parts/content', 'product' );
