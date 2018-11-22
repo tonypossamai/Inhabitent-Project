@@ -24,9 +24,10 @@ body:not(.home):not(.page-template-about):not(.post-type-archive):not(.tax-produ
 }
 
 body:not(.home):not(.page-template-about):not(.single-adventure) .content-area, body:not(.home):not(.page-template-about):not(.single-adventure) .widget-area {
-    padding-top: 2rem;
-
+	padding-top: 3rem;
+	padding-bottom: 3rem;
 }
+
 .widget {
 	margin: 0 0 3rem;
 	h2 {

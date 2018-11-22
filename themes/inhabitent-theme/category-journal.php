@@ -9,35 +9,37 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
-			<section class="journal-page">
-
+			
+		
 					<?php
 						$args = array( 'post_type' => 'post' );
 						$news_posts = get_posts( $args ); // returns an array of posts
 					?>
-				<div class="container-journal">
 
 					<?php foreach ( $news_posts as $post ) : setup_postdata( $post ); ?>
 
-						<div class="journal-box">
+			<article>
+				<header class="entry-header">
+					<?php the_post_thumbnail();?>
+				
+					<h2 class="entry-title"><a href="<?php the_permalink() ?>"><?php echo the_title(); ?></a></h2>
+					<div class="entry-meta">
+						<span class="posted-on"><?php echo get_the_date(); ?></span> /
+						<span class="byline"><?php echo $post->comment_count; ?></span>
+							COMMENTS / by 
+						<span class="author card"><?php the_author();?></span>	
+					</div>
+				</header>
 
-							<?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full');?>
-							<div class="journal-img" style="background-image: url('<?php echo $image[0] ?>')";>
-								<h2 class="journal-title"><?php echo the_title(); ?></h2>
-								<p class="journal-date"><?php echo get_the_date(); ?> /
-								<?php echo $post->comment_count; ?> COMMENTS / by <?php the_author();?></p>
-								
-							</div>
-						</div>
-						<p class="journal-content"><?php the_excerpt();?></p>
+				<div class="entry-content">
+					<p><?php the_excerpt();?></p>
+					<p><a href="<?php the_permalink(); ?>" class="read-more black-btn">Read more →</a></p>
+				</div>
 
-					<?php endforeach; wp_reset_postdata(); ?>
-				</div>
-				<div class="sidebar">
-					<?php get_sidebar('sidebar-1'); ?>
-				</div>
-			</section>
+			</article>
+			
+			<?php endforeach; wp_reset_postdata(); ?>
+
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

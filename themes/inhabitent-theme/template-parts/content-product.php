@@ -19,6 +19,6 @@
     <div class="product-info">
 		<h2 class="entry-title"><?php the_title()?></h2>
         	 
-        <span class="price"><?php echo CFS() ->get('price'); ?></span>
+        <span class="price"><?php echo CFS()->get('price'); ?></span>
     </div>
 </div>

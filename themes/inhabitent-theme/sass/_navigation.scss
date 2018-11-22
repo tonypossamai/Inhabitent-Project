@@ -76,6 +76,7 @@
 	}
 }
 
+
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
@@ -157,16 +158,6 @@
 	background-color: transparent;
 	position: absolute;
 }
-// .post-type-archive-product header.site-header, .category-journal header.site-header, .page-id-20 header.site-header {
-// 	background-color: #ffffff;
-// 	border-bottom: 1px solid #e1e1e1;
-// 	position: relative;
-// 	.menu .menu-item a {
-// 		color: $color__green-brand;
-// 		font-size: 1.2em;
-//         padding-left: 20px;
-//     }
-// }
 
 
 /* Widget Area */
@@ -180,7 +171,11 @@ body footer.site-footer {
     background: url(../../images/dark-wood@2x.png);
     background-size: 512px 512px;
     color: #fff;
-    
+	
+	a {
+		color: #fff;
+		text-decoration: none;
+	}
     .site-info {
         padding: 1.5rem 0;
         text-align: center;
@@ -198,7 +193,7 @@ body footer.site-footer {
 
         .widget-container, .footer-block-item {
             margin: 3rem 0;
-            padding-right: 1.5rem;
+            // padding-right: 1.5rem;
             width: 25%;        
 
             h3 {
@@ -224,12 +219,12 @@ body footer.site-footer {
                     text-decoration: underline;
                 }
             }
-            span {
+            span{
                 font-weight: bold;
             }
             .footer-logo{
                 background: url(../../images/logos/inhabitent-logo-text.svg) no-repeat;
-                background-size: 16em;
+                background-size: 14em;
                 width: 100%;
                 height: 3.6em;
             }

@@ -2,38 +2,6 @@
 # Content
 --------------------------------------------------------------*/
 
-/* Index Main */
-
-/* Posts and pages */
-
-// .sticky {
-// 	display: block;
-// }
-
-// .hentry {
-// 	margin: 0 0 $base__space-unit;
-// }
-
-// .updated:not(.published){
-// 	display: none;
-// }
-
-// .single .byline,
-// .group-blog .byline {
-// 	display: inline;
-// }
-
-// .page-content,
-// .entry-content,
-// .entry-summary {
-// 	margin: $base__space-unit 0 0;
-// }
-
-// .page-links {
-// 	clear: both;
-// 	margin: 0 0 $base__space-unit;
-// }
-
 /* Asides */
 
 .blog .format-aside .entry-title,
@@ -49,6 +17,7 @@
 .bypostauthor {
 	display: block;
 }
+
 
 /*-----------------------------------------------------------------------*/
 
@@ -136,3 +105,200 @@
 	}
 }
 
+
+/*-----------------------------------------------------------------------*/
+
+/* PRODUCT TYPE PAGE - taxonomy-product-type.php */
+
+	
+
+.entry-title, .page-title {
+		margin-top: 0;
+}
+
+.single-product .hentry {
+	display: flex;
+	justify-content: space-between;
+
+	.hentry {
+		margin: 0 0 4.5rem;
+	}
+	.entry-title {
+		color: #d99054;
+	}
+	.entry-content {
+		margin-top: 0;
+
+
+	}
+	.price {
+		font-family: $font__nove;
+		font-size: 1.8rem;
+		margin-top: 0;
+		text-transform: uppercase;
+	}
+}
+.single-product .site-content {
+    margin-left: auto;
+    margin-right: auto;
+	width: 1120px;
+
+	.taxonomy-description {
+		margin: 2rem auto 3rem;
+		max-width: 800px;
+	}
+
+	.product-image-wrapper {
+		width: 48%;
+	}
+	.product-content-wrapper {
+		width: 48%;
+
+		.social-buttons {
+			margin: 1.5rem 0;
+
+			i {
+				margin-right: 10px;
+			}
+		}
+	}
+}
+
+
+/*-----------------------------------------------------------------------*/
+
+/* JOURNAL PAGE - taxonomy-product-type.php */
+
+.category-journal .entry-header {
+    line-height: 0;
+	position: relative;
+	a:hover {
+		color: #f0e4d1;
+	}
+
+	h2 {
+		background-color: #248a83;
+		color: #fff;
+		font-size: 2.1rem;
+		left: 0;
+		padding: .75rem 1.5rem;
+		position: absolute;
+		margin-top: 2.25rem;
+		max-width: 75%;
+		top: 0;
+	}
+	a{
+		color: #fff;
+	}
+}
+.category-journal article {
+    margin: 0 0 4.5rem;
+}
+.category-journal .entry-meta {
+    background-color: #248a83;
+    bottom: 0;
+    color: #fff;
+    display: inline-block;
+	font-family: $font__nove;
+    padding: 1.00005rem 1.5rem;
+    position: absolute;
+    right: 0;
+    text-transform: uppercase;
+}
+
+
+/*-----------------------------------------------------------------------*/
+
+/* SINGLE POST PAGE - single-post.php */
+
+.single-post .entry-header {
+    line-height: 0;
+	position: relative;
+	
+	h1{
+		background-color: #248a83;
+		color: #fff;
+		font-size: 33.6px;
+		font-size: 2.1rem;
+		left: 0;
+		padding: .75rem 1.5rem;
+		position: absolute;
+		margin-top: 2.25rem;
+		max-width: 75%;
+		top: 0;
+	}
+}
+.single-post .entry-meta {
+    background-color: #248a83;
+    bottom: 0;
+    color: #fff;
+    display: inline-block;
+    font-family: sans-serif;
+    padding: 1.00005rem 1.5rem;
+    position: absolute;
+    right: 0;
+    text-transform: uppercase;
+}
+.comments-link {
+
+	a {
+    color: #fff;
+    text-decoration: none;
+	}
+}
+.social-buttons i {
+	margin-right: 10px;
+}
+.hentry {
+    margin: 0 0 4.5rem;
+}
+
+.comments-area {
+	.comments-title {
+		margin-bottom: 0;
+	}
+	.comment-list>li {
+		border-bottom: 1px solid #e1e1e1;
+	}
+	.comment {
+		padding-top: 1.5rem;
+	}
+	.bypostauthor {
+		display: block;
+	}
+	.comment article {
+		padding-bottom: 1.5rem;
+	}
+	.comment-body {
+		display: flex;
+	}
+	.comment-author-avatar {
+		border-radius: 50%;
+		height: 64px;
+		margin-right: 1.5rem;
+		overflow: hidden;
+		width: 64px;
+	}
+	.comment-author cite {
+		font-style: normal;
+		font-weight: 700;
+	}
+	.comment-metadata {
+		color: gray;
+		margin-bottom: .75rem;
+	}
+	.comment-content a {
+		word-wrap: break-word;
+	}
+}
+
+.comment-respond {
+
+	.comment-reply-title {
+		margin-top: 1.5rem;
+	}
+	small {
+		font-size: 80%;
+	}
+	
+}

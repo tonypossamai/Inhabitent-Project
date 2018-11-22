@@ -284,7 +284,9 @@ h1 {
   font-family: "Novecento";
   font-size: 2.4rem;
   font-weight: 300;
-  margin-bottom: .5rem; }
+  margin-bottom: .5rem;
+  text-transform: uppercase;
+  line-height: 1.25; }
 
 h2 {
   color: #2f1339;
@@ -293,13 +295,19 @@ h2 {
   font-family: "Novecento";
   letter-spacing: 2px;
   text-transform: uppercase;
-  text-decoration: none; }
+  text-decoration: none;
+  line-height: 1.25; }
 
 h3 {
   font-family: "Novecento";
-  font-size: 1.4em;
-  margin: 0 auto;
-  letter-spacing: 2px; }
+  font-size: 1.8em;
+  line-height: 1.25;
+  letter-spacing: 2px;
+  text-transform: uppercase; }
+
+a {
+  color: #248a83;
+  text-decoration: none; }
 
 /* Copy */
 p {
@@ -466,6 +474,15 @@ textarea {
   padding-left: 3px;
   width: 100%; }
 
+label {
+  color: #2f1339;
+  display: block;
+  font-family: Novecento Sans Web,sans-serif;
+  font-size: 17.6px;
+  font-size: 1.1rem;
+  margin-bottom: .5rem;
+  text-transform: uppercase; }
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -585,6 +602,9 @@ body footer.site-footer {
   background: url(../../images/dark-wood@2x.png);
   background-size: 512px 512px;
   color: #fff; }
+  body footer.site-footer a {
+    color: #fff;
+    text-decoration: none; }
   body footer.site-footer .site-info {
     padding: 1.5rem 0;
     text-align: center;
@@ -604,7 +624,6 @@ body footer.site-footer {
         flex-wrap: wrap; }
     body footer.site-footer .content .widget-container, body footer.site-footer .content .footer-block-item {
       margin: 3rem 0;
-      padding-right: 1.5rem;
       width: 25%; }
       body footer.site-footer .content .widget-container h3, body footer.site-footer .content .footer-block-item h3 {
         color: #d99054;
@@ -627,7 +646,7 @@ body footer.site-footer {
         font-weight: bold; }
       body footer.site-footer .content .widget-container .footer-logo, body footer.site-footer .content .footer-block-item .footer-logo {
         background: url(../../images/logos/inhabitent-logo-text.svg) no-repeat;
-        background-size: 16em;
+        background-size: 14em;
         width: 100%;
         height: 3.6em; }
 
@@ -705,7 +724,8 @@ body:not(.home):not(.page-template-about):not(.post-type-archive):not(.tax-produ
   width: 27%; }
 
 body:not(.home):not(.page-template-about):not(.single-adventure) .content-area, body:not(.home):not(.page-template-about):not(.single-adventure) .widget-area {
-  padding-top: 2rem; }
+  padding-top: 3rem;
+  padding-bottom: 3rem; }
 
 .widget {
   margin: 0 0 3rem; }
@@ -744,8 +764,6 @@ body:not(.home):not(.page-template-about):not(.single-adventure) .content-area, 
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
-/* Index Main */
-/* Posts and pages */
 /* Asides */
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
@@ -828,6 +846,162 @@ body:not(.home):not(.page-template-about):not(.single-adventure) .content-area, 
           width: 0;
           white-space: nowrap;
           content: "..................................................."; }
+
+/*-----------------------------------------------------------------------*/
+/* PRODUCT TYPE PAGE - taxonomy-product-type.php */
+.entry-title, .page-title {
+  margin-top: 0; }
+
+.single-product .hentry {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .single-product .hentry .hentry {
+    margin: 0 0 4.5rem; }
+  .single-product .hentry .entry-title {
+    color: #d99054; }
+  .single-product .hentry .entry-content {
+    margin-top: 0; }
+  .single-product .hentry .price {
+    font-family: "Novecento";
+    font-size: 1.8rem;
+    margin-top: 0;
+    text-transform: uppercase; }
+
+.single-product .site-content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1120px; }
+  .single-product .site-content .taxonomy-description {
+    margin: 2rem auto 3rem;
+    max-width: 800px; }
+  .single-product .site-content .product-image-wrapper {
+    width: 48%; }
+  .single-product .site-content .product-content-wrapper {
+    width: 48%; }
+    .single-product .site-content .product-content-wrapper .social-buttons {
+      margin: 1.5rem 0; }
+      .single-product .site-content .product-content-wrapper .social-buttons i {
+        margin-right: 10px; }
+
+/*-----------------------------------------------------------------------*/
+/* JOURNAL PAGE - taxonomy-product-type.php */
+.category-journal .entry-header {
+  line-height: 0;
+  position: relative; }
+  .category-journal .entry-header a:hover {
+    color: #f0e4d1; }
+  .category-journal .entry-header h2 {
+    background-color: #248a83;
+    color: #fff;
+    font-size: 2.1rem;
+    left: 0;
+    padding: .75rem 1.5rem;
+    position: absolute;
+    margin-top: 2.25rem;
+    max-width: 75%;
+    top: 0; }
+  .category-journal .entry-header a {
+    color: #fff; }
+
+.category-journal article {
+  margin: 0 0 4.5rem; }
+
+.category-journal .entry-meta {
+  background-color: #248a83;
+  bottom: 0;
+  color: #fff;
+  display: inline-block;
+  font-family: "Novecento";
+  padding: 1.00005rem 1.5rem;
+  position: absolute;
+  right: 0;
+  text-transform: uppercase; }
+
+/*-----------------------------------------------------------------------*/
+/* SINGLE POST PAGE - single-post.php */
+.single-post .entry-header {
+  line-height: 0;
+  position: relative; }
+  .single-post .entry-header h1 {
+    background-color: #248a83;
+    color: #fff;
+    font-size: 33.6px;
+    font-size: 2.1rem;
+    left: 0;
+    padding: .75rem 1.5rem;
+    position: absolute;
+    margin-top: 2.25rem;
+    max-width: 75%;
+    top: 0; }
+
+.single-post .entry-meta {
+  background-color: #248a83;
+  bottom: 0;
+  color: #fff;
+  display: inline-block;
+  font-family: sans-serif;
+  padding: 1.00005rem 1.5rem;
+  position: absolute;
+  right: 0;
+  text-transform: uppercase; }
+
+.comments-link a {
+  color: #fff;
+  text-decoration: none; }
+
+.social-buttons i {
+  margin-right: 10px; }
+
+.hentry {
+  margin: 0 0 4.5rem; }
+
+.comments-area .comments-title {
+  margin-bottom: 0; }
+
+.comments-area .comment-list > li {
+  border-bottom: 1px solid #e1e1e1; }
+
+.comments-area .comment {
+  padding-top: 1.5rem; }
+
+.comments-area .bypostauthor {
+  display: block; }
+
+.comments-area .comment article {
+  padding-bottom: 1.5rem; }
+
+.comments-area .comment-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.comments-area .comment-author-avatar {
+  border-radius: 50%;
+  height: 64px;
+  margin-right: 1.5rem;
+  overflow: hidden;
+  width: 64px; }
+
+.comments-area .comment-author cite {
+  font-style: normal;
+  font-weight: 700; }
+
+.comments-area .comment-metadata {
+  color: gray;
+  margin-bottom: .75rem; }
+
+.comments-area .comment-content a {
+  word-wrap: break-word; }
+
+.comment-respond .comment-reply-title {
+  margin-top: 1.5rem; }
+
+.comment-respond small {
+  font-size: 80%; }
 
 /*--------------------------------------------------------------
 # Media
@@ -1011,6 +1185,9 @@ object {
         grid-row: 1/span 1; }
         .home .adventures ul li:nth-child(2):before {
           padding-bottom: calc(50% - 12px); }
+        .home .adventures ul li:nth-child(2) .story-info h3 {
+          font-size: 48px;
+          font-size: 2.4rem; }
       .home .adventures ul li:nth-child(3):before {
         padding-bottom: calc(50% - 12px); }
       .home .adventures ul li:nth-child(3) .story-info h3 {
@@ -1057,6 +1234,8 @@ object {
             text-transform: none; }
             .home .adventures ul li .story-wrapper .story-info h3 a {
               color: #fff; }
+              .home .adventures ul li .story-wrapper .story-info h3 a:hover {
+                color: #f0e4d1; }
   .home .adventures .see-more {
     margin-top: 2.25rem; }
     .home .adventures .see-more a {
@@ -1123,8 +1302,11 @@ div.wpcf7 {
   margin-bottom: 3em;
   height: 100vh; }
 
-.entry-header h1 {
+.post-18 .entry-header {
   display: none; }
+
+.hero-image-header h1 {
+  display: block; }
 
 .entry-content h1 {
   display: -webkit-box;

@@ -143,7 +143,12 @@
 				&:before {
 					padding-bottom: calc(50% - 12px);
 				}
+				.story-info h3 {
+					font-size: 48px;
+					font-size: 2.4rem;
+				}
 			}
+
 			&:nth-child(3){
 				&:before {
 					padding-bottom: calc(50% - 12px);
@@ -153,6 +158,7 @@
 					font-size: 1.6rem;
 				}
 			}
+
 			&:last-child{
 				&:before {
 					padding-bottom: calc(50% - 12px);
@@ -162,7 +168,6 @@
 					font-size: 1.6rem;
 				}
 			}
-
 
 			.story-wrapper {
 				bottom: 0;
@@ -182,7 +187,6 @@
 					width: 100%;
 					z-index: 1;
 				}
-
 				img {
 					left: 50%;
 					max-height: 620px;
@@ -205,6 +209,9 @@
 
 						a {
 							color: #fff;
+							&:hover {
+								color: #f0e4d1;
+							}
 						}
 					}
 				}

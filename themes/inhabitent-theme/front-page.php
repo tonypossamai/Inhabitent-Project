@@ -77,7 +77,7 @@ get_header(); ?>
 							<?php endforeach; wp_reset_postdata(); ?>
 					</ul>
 					<p class="see-more">
-						<a class="btn" href="<?php the_permalink(); ?>/adventures/">MORE ADVENTURES</a>
+						<a class="btn" href="<?php the_permalink(); ?>adventures/">MORE ADVENTURES</a>
 					</p>
 
 					
