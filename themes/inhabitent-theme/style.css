@@ -305,10 +305,6 @@ h3 {
   letter-spacing: 2px;
   text-transform: uppercase; }
 
-a {
-  color: #248a83;
-  text-decoration: none; }
-
 /* Copy */
 p {
   margin-bottom: 1.5rem; }
@@ -487,6 +483,10 @@ label {
 # Navigation
 --------------------------------------------------------------*/
 /* Links */
+a {
+  color: #248a83;
+  text-decoration: none; }
+
 /* Menus */
 .main-navigation {
   font-family: sans-serif;
@@ -508,18 +508,15 @@ label {
       .main-navigation ul ul li:hover > ul,
       .main-navigation ul ul li.focus > ul {
         left: 100%; }
-      .main-navigation ul ul a {
-        color: #248a83;
-        text-decoration: none; }
-  .main-navigation li:hover > ul,
-  .main-navigation li.focus > ul {
-    left: auto; }
-  .main-navigation li {
-    float: left;
-    position: relative; }
-  .main-navigation a {
-    display: block;
-    text-decoration: none; }
+    .main-navigation ul li:hover > ul,
+    .main-navigation ul li.focus > ul {
+      left: auto; }
+    .main-navigation ul li {
+      float: left;
+      position: relative; }
+    .main-navigation ul a {
+      display: block;
+      text-decoration: none; }
 
 /* Small menu. */
 .menu-toggle,
@@ -572,6 +569,40 @@ label {
     padding-left: 20px; }
     .site-header .menu .menu-item a:hover {
       color: #f0e4d1; }
+  .site-header fieldset {
+    padding: 0;
+    border: none;
+    margin-left: 30px; }
+
+.header-search .search-toggle {
+  color: #248a83;
+  float: left;
+  padding-top: .33rem; }
+
+.header-search label {
+  display: none;
+  float: left;
+  margin: 0; }
+
+.header-search input[type=search] {
+  border: 0;
+  background: transparent;
+  -webkit-transform: width 0.4s ease-in-out;
+          transform: width 0.4s ease-in-out;
+  font-family: Novecento Sans Web,sans-serif;
+  margin-left: .75rem;
+  padding: 0 .3rem;
+  text-transform: uppercase; }
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto; }
+
+.fa-search:before {
+  content: "\f002";
+  color: white; }
 
 .site-header.reverse {
   width: 100%;
@@ -587,10 +618,16 @@ label {
   border: 1px solid #e1e1e1; }
   .site-header.reverse .logo {
     width: 27%; }
+  .site-header.reverse fieldset {
+    padding: 0;
+    border: none;
+    margin-left: 30px; }
   .site-header.reverse .menu .menu-item a {
     color: #248A83;
     font-size: 1.1em;
     padding-left: 20px; }
+  .site-header.reverse .main-navigation {
+    display: block; }
 
 .home header.site-header, .page-template-page-about header.site-header {
   background-color: transparent;
@@ -706,7 +743,9 @@ body footer.site-footer {
 .clearfix {
   clear: both;
   content: "";
-  display: table; }
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex; }
 
 /*--------------------------------------------------------------
 # Widgets
@@ -1116,6 +1155,9 @@ object {
 
 /*-----------------------------------------------------------------------*/
 /* Inhabitent Journal Section */
+.journal-section {
+  margin-bottom: 3.5rem; }
+
 .journal-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1128,7 +1170,15 @@ object {
   width: 100%;
   border: 1px solid #e1e1e1;
   margin: 10px;
-  height: 420px; }
+  height: 420px;
+  position: relative; }
+  .journal-wrapper .journal-title {
+    font-size: 1.3rem;
+    color: #248A83; }
+  .journal-wrapper .black-btn {
+    position: absolute;
+    bottom: .7rem;
+    left: .7rem; }
 
 .journal-wrapper img {
   width: 100%;

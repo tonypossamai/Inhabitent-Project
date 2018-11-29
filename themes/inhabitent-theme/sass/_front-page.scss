@@ -57,6 +57,10 @@
 
 /* Inhabitent Journal Section */
 
+
+.journal-section {
+	margin-bottom: 3.5rem;
+}
 .journal-container {
 	display: flex;
     margin-left: auto;
@@ -68,6 +72,17 @@
 	border: 1px solid #e1e1e1;
 	margin: 10px;
 	height: 420px;
+	position: relative;
+
+	.journal-title {
+		font-size: 1.3rem;
+		color: $color__green_brand;
+	}
+	.black-btn {
+		position: absolute;
+		bottom: .7rem;
+		left: .7rem;
+	}
 }
 .journal-wrapper img {
 	width: 100%;
@@ -90,8 +105,6 @@
 	text-decoration: none;
 	color: $color__green_brand;
 }
-
-
 
 /*-----------------------------------------------------------------------*/
 
