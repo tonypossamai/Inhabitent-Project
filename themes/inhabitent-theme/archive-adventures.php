@@ -15,26 +15,28 @@ get_header(); ?>
 					<header class="page-header">	
 						<h1 class="page-title">LATEST ADVENTURES</h1>		
 					</header><!-- .page-header -->
+					<section class="adventure-grid">
+							<?php /* Start the Loop */ ?>
+							<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php /* Start the Loop */ ?>
-					<?php while ( have_posts() ) : the_post(); ?>
+						
+								<?php
+									get_template_part( 'template-parts/content', 'adventure' );
+								?>
+						
 
-						<?php
-							get_template_part( 'template-parts/content', 'adventure' );
-						?>
+							<?php endwhile; ?>
 
-					<?php endwhile; ?>
+							<?php the_posts_navigation(); ?>
 
-					<?php the_posts_navigation(); ?>
+						<?php else : ?>
 
-				<?php else : ?>
+							<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-					<?php get_template_part( 'template-parts/content', 'none' ); ?>
-
-				<?php endif; ?>
+						<?php endif; ?>
+					</section>
 			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
