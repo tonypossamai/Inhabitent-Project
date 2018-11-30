@@ -6,7 +6,7 @@
  */
 
 get_header(); ?>
-
+<div class="taxonomy-product-type-page">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			<div class="container">
@@ -42,6 +42,6 @@ get_header(); ?>
 			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
+</div>
 
 <?php get_footer(); ?>

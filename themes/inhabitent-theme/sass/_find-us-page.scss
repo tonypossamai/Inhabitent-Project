@@ -2,7 +2,7 @@
 
 /* FIND US PAGE */ 
 
-body:not(.home):not(.page-template-page-about):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure) .site-content {
+body:not(.home):not(.page-template-page-about):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventures) .site-content {
     display: flex;
     margin-left: auto;
     margin-right: auto;
@@ -18,6 +18,9 @@ body:not(.home):not(.page-template-page-about):not(.post-type-archive):not(.tax-
 
 
 .post-20 {
+
+	margin-top: 50px;
+
 	.entry-header h1 {
 		display: block;
 	}

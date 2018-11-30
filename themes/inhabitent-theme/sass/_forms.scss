@@ -117,3 +117,12 @@ label {
     margin-bottom: .5rem;
     text-transform: uppercase;
 }
+.error404 label {
+    display: inline-block;
+}
+fieldset {
+    border: 0;
+    padding: 0;
+    padding-bottom: .75rem;
+    margin: 0;
+}

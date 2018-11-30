@@ -77,6 +77,9 @@
 	.journal-title {
 		font-size: 1.3rem;
 		color: $color__green_brand;
+		&:hover {
+			color: #2f1339;
+		}
 	}
 	.black-btn {
 		position: absolute;
@@ -99,7 +102,7 @@
 	color: #404040;
 	font-family: $font__merri;
 	font-size: .8em;
-	margin-bottom: 5px;
+	margin-bottom: -20px;
 }
 .post-wrapper a {
 	text-decoration: none;

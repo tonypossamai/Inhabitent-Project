@@ -6,8 +6,9 @@
  */
 
 get_header(); ?>
+<div class="category-journal-page">
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area journal-sec-part">
 		<main id="main" class="site-main" role="main">
 			
 		
@@ -45,4 +46,5 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 	<?php get_sidebar(); ?>
+</div>
 <?php get_footer(); ?>

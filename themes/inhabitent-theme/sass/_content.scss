@@ -17,17 +17,41 @@
 .bypostauthor {
 	display: block;
 }
+.site {
+    flex: 1 0 auto;
+}
 
+.site-content {
+    padding-top: 50px;
+}
+.home .site-content, 
+.page-template-page-about .site-content, 
+.single-adventures .site-content {
+    padding-top: 0;
+}
+body:not(.home):not(.page-template-page-about):not(.single-adventure) .content-area, body:not(.home):not(.page-template-page-about):not(.single-adventure) .widget-area {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
 
 /*-----------------------------------------------------------------------*/
 
 /* SHOP STUFF PAGE - arquive-product.php */
 
+.taxonomy-product-type-page {
+	padding-top: 50px;
+	margin-bottom: 3rem;
+}
+
+.archive-product-page {
+	padding-top: 80px;
+}
+
 .post-type-archive-product .page-header, .tax-product-type .page-header {
     border-bottom: 1px dashed #c8c8c8;
     margin-bottom: 3rem;
 	text-align: center;
-	
+
 	.product-type-list {
 		display: flex;
 		font-family: $font__nove;
@@ -110,7 +134,9 @@
 
 /* PRODUCT TYPE PAGE - taxonomy-product-type.php */
 
-	
+.single-product-page {
+	padding-top: 150px;
+}
 
 .entry-title, .page-title {
 		margin-top: 0;
@@ -164,11 +190,16 @@
 	}
 }
 
-
 /*-----------------------------------------------------------------------*/
 
 /* JOURNAL PAGE - taxonomy-product-type.php */
 
+.category-journal-page, .find-us-page {
+	display: flex;
+}
+.journal-sec-part {
+	padding-top: 50px
+}
 .category-journal .entry-header {
     line-height: 0;
 	position: relative;
@@ -211,6 +242,9 @@
 
 /* SINGLE POST PAGE - single-post.php */
 
+.single-post-margin {
+	margin-top: 50px;
+}
 .single-post .entry-header {
     line-height: 0;
 	position: relative;
@@ -302,3 +336,47 @@
 	}
 	
 }
+
+
+/*-----------------------------------------------------------------------*/
+
+/* MORE ADVENTURES PAGE */
+
+.post-type-archive-adventures .page-header {
+    border-bottom: 1px dashed #c8c8c8;
+    margin-bottom: 3rem;
+    padding-bottom: 1.5rem;
+    text-align: center;
+}
+
+/*-----------------------------------------------------------------------*/
+
+/* SINGLE ADVENTURE PAGE - single-adventures.php */
+
+.single-adventures-page {
+	width: 100%;
+}
+.single-adventures {
+	.entry-title,
+	.entry-meta,
+	.entry-content,
+	.entry-footer {
+	  max-width: 800px;
+	}
+  
+	.entry-title {
+	  margin-top: 3rem;
+	}
+  
+	.entry-meta {
+	  font-family: $font__nove;
+	  @include font-size(1.2);
+	  text-transform: uppercase;
+	}
+  
+	.entry-content {
+	  margin-left: auto;
+	  margin-right: auto;
+	}
+  }
+

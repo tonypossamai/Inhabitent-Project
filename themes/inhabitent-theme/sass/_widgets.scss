@@ -20,13 +20,14 @@
 
 body:not(.home):not(.page-template-about):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure) .widget-area {
     padding-left: 5%;
-    width: 27%;
+	width: 27%;
+	padding-top: 30px;
 }
 
-body:not(.home):not(.page-template-about):not(.single-adventure) .content-area, body:not(.home):not(.page-template-about):not(.single-adventure) .widget-area {
-	padding-top: 3rem;
-	padding-bottom: 3rem;
-}
+// body:not(.home):not(.single-adventure), (.single-adventure) .widget-area {
+// 	padding-top: 3rem;
+// 	padding-bottom: 3rem;
+// }
 
 .widget {
 	margin: 0 0 3rem;

@@ -13,7 +13,7 @@ a {
 
 .main-navigation {
 	font-family: sans-serif;
-	padding: 10px;  
+	padding: 5px;  
 
 
 	ul {
@@ -99,8 +99,8 @@ a {
 
 .site-header {
     width: 100%;
-    padding: 10px 180px;
-	position: relative;
+    padding: 5px 180px;
+	position: absolute;
 	
 	.site-branding {
 		display: flex;
@@ -108,7 +108,7 @@ a {
 
 	}
     .logo {
-		width: 5%;
+		width: 50px;
 	}
 	.menu .menu-item a {
 		color: #fff;
@@ -156,23 +156,27 @@ a {
 }
 .fa-search:before {
 	content: "\f002";
-	color: white;
 }
 
 .site-header.reverse {
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
 	border: 1px solid #e1e1e1;
+	max-height: 50px;
+
+	.fa-search:before {
+		content: "\f002";
+	}
 
 	.logo {
-		width: 27%;
+		width: 25%;
 	}
 	fieldset {
 		padding: 0;
 		border: none;
 		margin-left: 30px;
+
 	}
 	.menu .menu-item a {
 		color: $color__green-brand;
@@ -255,7 +259,7 @@ body footer.site-footer {
             span{
                 font-weight: bold;
             }
-            .footer-logo{
+            .footer-logo {
                 background: url(../../images/logos/inhabitent-logo-text.svg) no-repeat;
                 background-size: 14em;
                 width: 100%;

@@ -19,7 +19,7 @@
 	<body <?php body_class(); ?>>
 		<div id="page" class="hfeed site">
 			<a class="skip-link screen-reader-text" href="#content"><?php echo esc_html( 'Skip to content' ); ?></a>
-			<?php if (is_front_page() || is_page('about')): ?>
+			<?php if (is_front_page() || is_page('about') || is_singular($post_types = 'adventures')): ?>
 				<header id="masthead" class="site-header" role="banner">
 					<div class="site-branding">
 						<div class="logo">
@@ -39,7 +39,7 @@
 				<nav id="site-navigation" class="main-navigation clearfix" role="navigation">
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php echo esc_html( 'Primary Menu' ); ?></button>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-					<?php get_search_form();?>
+					<!-- <?php get_search_form();?> -->
 				</nav><!-- #site-navigation -->
 			</header><!-- #masthead -->
 
